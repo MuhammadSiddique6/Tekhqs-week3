@@ -1,0 +1,147 @@
+/* General Reset and Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #111827;
+  height: 70px;
+}
+
+.header-title {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
+.logo {
+  width: 5rem;
+}
+
+/* Main Layout */
+.main-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+/* Video Grid */
+#video-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 20px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  background-color: #000;
+}
+
+/* Chat Panel */
+.chat-panel {
+  width: 300px;
+  background-color: #6b7280;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  margin-right: 10px;
+}
+
+.chat-header {
+  background-color: #030712;
+  height: 40px;
+  padding: 8px;
+  align-items: center;
+  font-size: x-large;
+  font-weight: 600;
+  color: white;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.chat-input-container {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  border-top: 2px solid black;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #000;
+}
+
+.send-icon {
+  width: 40px;
+  margin-left: 8px;
+}
+
+/* Control Bar */
+.control-bar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 12px 0;
+  background-color: #1e1e1e;
+}
+
+.control-bar {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  background-color: #9ca3af;
+  width: 224px;
+  height: 73px;
+  align-items: center;
+  padding-left: 20px;
+  border-radius: 12px;
+  gap: 12px;
+}
+
+.control-button img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+.icon-large {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}

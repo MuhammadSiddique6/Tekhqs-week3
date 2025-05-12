@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/tekhqslogo.png" />
+    <title>Tekhqs Meeting</title>
+    <script>
+      const ROOM_ID = "<%= roomid %>";
+    </script>
+    <script
+      defer
+      src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"
+    ></script>
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="/script.js"></script>
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="header-title">Welcome to Tekhqs Meeting</h1>
+      <img src="/tekhqslogo.png" alt="Tekhqs Logo" class="logo" />
+    </div>
+
+    <div class="main-container">
+      <div id="video-grid"></div>
+
+     <div class="chat-panel">
+  <div class="chat-header">Chat</div>
+  
+  <div id="messages" style="flex-grow: 1; overflow-y: auto; padding: 10px; color: white;"></div>
+  
+  <div class="chat-input-container">
+    <input id="chat-input" type="text" placeholder="Write a message" class="chat-input" />
+    <button onclick="sendMessage()">
+      <img class="send-icon" src="/send_icon.png" alt="Send" />
+    </button>
+  </div>
+</div>
+
+    </div>
+
+    <footer class="control-bar-wrapper">
+      <div class="control-bar">
+        <div class="controls">
+          <button onclick="toggleCamera()" class="control-button">
+            <img id="camera-img" src="/camera_on.png" alt="Camera" />
+          </button>
+          <button onclick="endcall()" class="control-button">
+            <img
+              src="/end_call.png"
+              class="control-button"
+              style="width: 40px"
+            />
+          </button>
+          <button onclick="toggleMic()" class="control-button">
+            <img id="mic-img" src="/mic_on.png" alt="Mic" class="icon-large" />
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
